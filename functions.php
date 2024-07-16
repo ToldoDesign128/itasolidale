@@ -1,13 +1,29 @@
 
 <?php
 
-function register_my_menu()
-{
-  register_nav_menu('primary', __('Menu principale', 'itasolidale'));
-  register_nav_menu('footer', __('Menu footer', 'itasolidale'));
-}
-add_action('after_setup_theme', 'register_my_menu');
-
+if (!function_exists('itas_setup')) :
+  function itas_setup()
+  {
+    /**
+     * Add default posts and comments RSS feed links to <head>.
+     */
+    add_theme_support('automatic-feed-links');
+    /**
+     * Enable support for post thumbnails and featured images.
+     */
+    add_theme_support('post-thumbnails');
+    // Remove Guttemberg editor
+    add_filter('use_block_editor_for_post', '__return_false');
+    /**
+     * Add support for two custom navigation menus.
+     */
+    register_nav_menus(array(
+      'primary'   => __('Menu principale', 'ovum_bc'),
+      'footer'   => __('Menu footer', 'ovum_bc'),
+    ));
+  }
+endif; // itas_setup
+add_action('after_setup_theme', 'itas_setup');
 
 
 if (!class_exists('Footer_Custom_Nav_Walker')) {
@@ -36,20 +52,17 @@ if (!class_exists('Footer_Custom_Nav_Walker')) {
         $output .= '</span>';
       }
     }
-
-    //function end_el(&$output, $item, $depth=0, $args=[], $id=0) {
-    //  $output .= "</li>";
-    //}
-
   }
 }
 
-wp_enqueue_style('style', get_stylesheet_uri());
+function add_theme_script(){
+  wp_enqueue_style('style', get_stylesheet_uri());
+}
+add_action('wp_enqueue_scripts', 'add_theme_scripts');
 
 
-function create_posttype()
+function create_post_type()
 {
-
   register_post_type(
     'projects',
     // CPT Options
@@ -64,17 +77,14 @@ function create_posttype()
       'show_in_rest' => true,
     )
   );
+
+  $supports = array('thumbnail', 'custom-fields', 'excerpt');
+  add_post_type_support('projects', $supports);
 }
 
 // Hooking up our function to theme setup
-add_action('init', 'create_posttype');
+add_action('init', 'create_post_type');
 
-add_theme_support('post-thumbnails');
-add_post_type_support('projects', 'thumbnail');
-add_post_type_support('projects', 'custom-fields');
-add_post_type_support('projects', 'excerpt');
-
-add_filter('query_vars', 'registering_custom_query_var');
 
 function registering_custom_query_var($query_vars)
 {
@@ -82,3 +92,4 @@ function registering_custom_query_var($query_vars)
   $query_vars[] = 'pyear';
   return $query_vars;
 }
+add_filter('query_vars', 'registering_custom_query_var');
