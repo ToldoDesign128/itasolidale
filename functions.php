@@ -12,8 +12,6 @@ if (!function_exists('itas_setup')) :
      * Enable support for post thumbnails and featured images.
      */
     add_theme_support('post-thumbnails');
-    // Remove Guttemberg editor
-    add_filter('use_block_editor_for_post', '__return_false');
     /**
      * Add support for two custom navigation menus.
      */
