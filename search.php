@@ -1,5 +1,4 @@
-<?php get_template_part("layout/header"); ?>
-
+<?php get_header();?>
 <main>
 
     <?php
@@ -63,5 +62,4 @@
 
 
 </main>
-
-<?php get_template_part("layout/footer"); ?>
+<?php get_footer();?>

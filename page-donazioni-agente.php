@@ -1,5 +1,4 @@
-<?php get_template_part("layout/header"); ?>
-
+<?php get_header();?>
 <main>
 
   <h1 class="text-3xl font-bold underline hidden">
@@ -28,7 +27,5 @@ function copiaIban() {
   
 }
 </script>
-
 </main>
-
-<?php get_template_part("layout/footer"); ?>
+<?php get_footer();?>
