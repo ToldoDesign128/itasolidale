@@ -56,7 +56,7 @@ if (!class_exists('Footer_Custom_Nav_Walker')) {
 function add_theme_script(){
   wp_enqueue_style('style', get_stylesheet_uri());
 }
-add_action('wp_enqueue_scripts', 'add_theme_scripts');
+add_action('wp_enqueue_scripts', 'add_theme_script');
 
 
 function create_post_type()
