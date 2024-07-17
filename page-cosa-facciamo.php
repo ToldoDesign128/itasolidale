@@ -146,8 +146,6 @@
     </div>
     <?php the_content(); ?>
 
-    
-<script>
     document.addEventListener("DOMContentLoaded", function () {
 
         // ciclo tutti i pulsanti
