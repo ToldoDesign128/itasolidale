@@ -1,6 +1,5 @@
 <?php get_header();?>
 <main>
-
     <?php
     $s = get_search_query();
     $args = array(
@@ -10,7 +9,6 @@
     $the_query = new WP_Query($args);
     if ($the_query->have_posts()) {
         ?>
-
         <div class="px-[120px] py-20 justify-start items-start gap-2.5 inline-flex">
             <h1 class="text-stone-950 text-[54.93px] font-medium font-['Halyard Display'] leading-[60.42px]">Risultati
                 ricerca: " <?php echo get_query_var('s'); ?> "</h1>

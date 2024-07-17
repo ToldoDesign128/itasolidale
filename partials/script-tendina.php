@@ -1,9 +1,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-
         // ciclo tutti i pulsanti
         document.querySelectorAll('[data-box] [role=button]').forEach(function (btn) {
-
             // aggiungo click su ogni pulsante
             btn.addEventListener('click', function (ev) {
                 ev.preventDefault();
@@ -52,4 +50,6 @@
 
         });
 
-    }); </script>
+    }); 
+    
+    </script>
