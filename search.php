@@ -1,5 +1,5 @@
 <?php get_header();?>
-<main>
+<!-- <main>
     <?php
     $s = get_search_query();
     $args = array(
@@ -59,5 +59,5 @@
 
 
 
-</main>
+</main> -->
 <?php get_footer();?>
