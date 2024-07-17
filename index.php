@@ -1,8 +1,5 @@
-<?php get_header();?>
-<main>
-  <h1 class="text-3xl font-bold underline ">
-    <?php the_title() ?>
-  </h1>
-  <?php the_content() ?>
+<?php get_header(); ?>
+<main class="placeholder h-screen">
+
 </main>
-<?php get_footer();?>
+<?php get_footer(); ?>
