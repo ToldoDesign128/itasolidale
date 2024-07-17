@@ -5,7 +5,6 @@
   <link rel="stylesheet" href="https://use.typekit.net/xgk4jzd.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class('font-body'); ?>>
