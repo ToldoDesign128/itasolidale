@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_template_part("layout/header"); ?>
 
 <h1 class="text-3xl font-bold underline hidden">
     <?php the_title()?>
@@ -84,7 +84,7 @@
         ?>
 
         <h3>Anno</h3>
-        <div class="relative text-left flex items-start flex-row gap-x-5 m-6 ">
+        <div class="relative inline-block text-left flex items-start flex-row gap-x-5 m-6 ">
             <!--filtri-->
             <?php
             for ($i = $lastYear; $i >= $firstYear; $i--) {
@@ -146,6 +146,8 @@
     </div>
     <?php the_content(); ?>
 
+    
+<script>
     document.addEventListener("DOMContentLoaded", function () {
 
         // ciclo tutti i pulsanti
@@ -202,4 +204,6 @@
     }); </script>
 </main>
 
-<?php get_footer();?>
+
+
+<?php get_template_part("layout/footer"); ?>
