@@ -4,23 +4,6 @@
 <head>
   <link rel="stylesheet" href="https://use.typekit.net/xgk4jzd.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        fontFamily: {
-          'body': ['halyard-display', 'sans-serif'],
-        },
-        extend: {
-          backgroundImage: {
-            'card-img': "url('../images/Alluvione.jpg')",
-          },
-          colors: {
-            clifford: '#da373d',
-          }
-        }
-      }
-    }
-  </script>
   <style type="text/tailwindcss">
 
     header .menu-item {
