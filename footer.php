@@ -11,7 +11,7 @@
         'container' => 'div',
         'container_class' => '',
         'menu_class' => 'flex gap-2 items-center justify-center  m-10 ',
-        'walker' => new Footer_Custom_Nav_Walker,
+        // 'walker' => new Footer_Custom_Nav_Walker,
       )
     );
     ?>
