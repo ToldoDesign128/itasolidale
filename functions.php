@@ -5,6 +5,7 @@ function register_my_menu()
   register_nav_menu('footer', __('Menu footer', 'itasolidale'));
 }
 add_action('after_setup_theme', 'register_my_menu');
+
 if (!class_exists('Footer_Custom_Nav_Walker')) {
   class Footer_Custom_Nav_Walker extends Walker_Nav_Menu
   {
@@ -33,7 +34,8 @@ if (!class_exists('Footer_Custom_Nav_Walker')) {
     //  $output .= "</li>";
     //}
   }
-}
+};
+
 function create_posttype()
 {
   register_post_type(
@@ -50,7 +52,8 @@ function create_posttype()
       'show_in_rest' => true,
     )
   );
-}
+};
+
 // Hooking up our function to theme setup
 add_action('init', 'create_posttype');
 add_theme_support('post-thumbnails');
@@ -63,13 +66,12 @@ function registering_custom_query_var($query_vars)
   $query_vars[] = 'pcat';
   $query_vars[] = 'pyear';
   return $query_vars;
-}
+};
 /*  Enqueue css
 /* ------------------------------------ */
 if ( ! function_exists( 'itasolidale_styles' ) ) {
   function nakedpress_styles() {
     wp_enqueue_style( 'itasolidale-style', get_template_directory_uri().'/style.css');
    }
-}
+};
 add_action( 'wp_enqueue_scripts', 'itasolidale_styles' );
-?>
