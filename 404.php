@@ -14,7 +14,7 @@
         Torna alla HOME
       </div>
       <img loading="lazy" decoding="async" width="195" height="195" class="wp-image-555" style="width: 12px;"
-        src="<?php echo get_template_directory_uri();?>/wp-content/uploads/2024/06/Vector.png">
+        src="<?php echo get_template_directory();?>/wp-content/uploads/2024/06/Vector.png">
     </a>
 
 

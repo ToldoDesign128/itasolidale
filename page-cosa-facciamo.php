@@ -84,7 +84,7 @@
         ?>
 
         <h3>Anno</h3>
-        <div class="relative inline-block text-left flex items-start flex-row gap-x-5 m-6 ">
+        <div class="relative text-left flex items-start flex-row gap-x-5 m-6 ">
             <!--filtri-->
             <?php
             for ($i = $lastYear; $i >= $firstYear; $i--) {
