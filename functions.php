@@ -77,4 +77,15 @@ function registering_custom_query_var($query_vars)
   return $query_vars;
 }
 
-wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+/*  Enqueue css
+/* ------------------------------------ */
+if ( ! function_exists( 'itasolidale_styles' ) ) {
+  function nakedpress_styles() {
+
+    wp_enqueue_style( 'itasolidale-style', get_template_directory_uri().'/style.css');
+
+   }
+}
+add_action( 'wp_enqueue_scripts', 'itasolidale_styles' );
+?>
