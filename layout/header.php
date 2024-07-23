@@ -3,7 +3,6 @@
 
 <head>
   <link rel="stylesheet" href="https://use.typekit.net/xgk4jzd.css">
-  <?php wp_head(); ?>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -23,11 +22,9 @@
     }
   </script>
   <style type="text/tailwindcss">
-
     header .menu-item {
         @apply hover:text-red-700 uppercase;
       }
-
     .wp-block-image{
       img{
         @apply border-0;
@@ -50,9 +47,7 @@
       img {
         @apply border-0;
       }
-    }
-    
-    
+    }   
 
     .wp-block-custom-post-type-widget-blocks-latest-posts__featured-image {
       height: 250px;
@@ -95,6 +90,10 @@
       @apply text-white
     }
     </style>
+  <?php wp_head(); ?>
+
+
+
 </head>
 
 <body <?php body_class('font-body'); ?>>
