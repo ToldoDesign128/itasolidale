@@ -70,7 +70,7 @@ function registering_custom_query_var($query_vars)
 /*  Enqueue css
 /* ------------------------------------ */
 if ( ! function_exists( 'itasolidale_styles' ) ) {
-  function nakedpress_styles() {
+  function itasolidale_styles() {
     wp_enqueue_style( 'itasolidale-style', get_template_directory_uri().'/style.css');
    }
 };
