@@ -1,7 +1,5 @@
 <?php get_template_part("layout/header"); ?>
-
 <main>
-
   <h1 class="text-3xl font-bold underline hidden">
     <?php the_title()?>
   </h1>
@@ -17,8 +15,6 @@
   </div>
 </div>
   
-
-
 <script>
 function copiaIban() {
   var copyText = document.getElementById("myInput");
@@ -28,7 +24,5 @@ function copiaIban() {
   
 }
 </script>
-
 </main>
-
 <?php get_template_part("layout/footer"); ?>

@@ -1,5 +1,4 @@
 <?php
-
 $title = $args['title'];
 $time='';
 if (isset($args['time'])) {
@@ -13,9 +12,7 @@ if (isset($args['more_link_text'])) {
 $more_link_href = $args['more_link_href'];
 $img_src = $args['img_src'];
 $img_alt = $args['img_alt'];
-
 ?>
-
 <div class="text-black g-4 flex flex-col ">
   <?php if (!empty($img_src) && !empty($img_alt)) { ?>
     <div class="h-[280px] overflow-hidden mb-4">

@@ -1,13 +1,10 @@
 <?php get_template_part("layout/header"); ?>
-
 <h1 class="text-3xl font-bold underline hidden">
     <?php the_title()?>
   </h1>
-
 <div class=" px-[120px] py-20 justify-start items-start gap-2.5 inline-flex">
     <div class=" text-stone-950 text-[28.13px] font-light font-['Halyard Display']">Per diffondere la cultura della solidarietà dentro e fuori dai confini dell’impresa facciamo leva su quattro motori progettuali, da cui partono ogni anno piccole e grandi iniziative che fanno bene a chi fa del bene</div>
 </div>
-
 <main>
     <div class="my-2 mx-auto w-full">
         <div class="flex flex-row h-[38rem]">
@@ -64,25 +61,16 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
-
     <!--PROGETTTI-->
-
     <div class="px-40">
         <h2 class="text-red-500 text-5xl font-normal mb-10 mt-28">Notizie</h2>
-
         <?php
-
         $lastYear = intval(date("Y"));
         $firstYear = $lastYear - 5;
         $year = intval(get_query_var('pyear', $lastYear));
-
-
         ?>
-
         <h3>Anno</h3>
         <div class="relative text-left flex items-start flex-row gap-x-5 m-6 ">
             <!--filtri-->
@@ -94,39 +82,28 @@
                     <?= $i ?>
                 </a>
                 <?php
-
             }
             ?>
         </div>
-
         
     </div>
-
     <div class="grid grid-cols-2 justify-between gap-10 px-28 pt-10">
-
         <?php
-
         $meta_query = [];
-
         $meta_query[] = array(
             'key' => 'anno',
             'value' => $year,
             'compare' => '=',
         );
-
         
-
         $args = array(
             'post_type' => 'projects',
             'posts_per_page' => -1,
             'meta_query' => $meta_query,
         );
-
         $loop = new WP_Query($args);
-
         while ($loop->have_posts()):
             $loop->the_post();
-
             get_template_part('partials/card', null, [
                 'time' => get_the_date(),
                 'title' => get_the_title(),
@@ -136,74 +113,54 @@
                 'more_link_text' => 'Scopri di più',
                 'more_link_href' => get_permalink(),
             ]);
-
         endwhile;
-
         wp_reset_postdata();
-
         ?>
-
     </div>
     <?php the_content(); ?>
-
     
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-
         // ciclo tutti i pulsanti
         document.querySelectorAll('[data-box] [role=button]').forEach(function (btn) {
-
             // aggiungo click su ogni pulsante
             btn.addEventListener('click', function (ev) {
                 ev.preventDefault();
-
                 // reset di tutti i box 
                 document.querySelectorAll('[data-box]').forEach(function (box) {
                     box.classList.remove('w-9/12');
                     box.classList.add('w-1/12');
-
                     var c = box.querySelector('[data-box-content]');
                     if (c) {
                         c.classList.add('sr-only');
                         c.classList.remove('opacity-100');
                         c.classList.add('opacity-0');
                     }
-
                     var t = box.querySelector('[data-box-toggler]');
                     if (t) {
                         t.classList.remove('w-[10%]');
                         t.previousElementSibling.classList.remove('w-[10%]');
                     }
-
                 });
-
                 // allargo il box corrente
                 var box = btn.closest('[data-box]');
                 if (box) {
                     box.classList.remove('w-1/12');
                     box.classList.add('w-9/12');
-
                     var t = box.querySelector('[data-box-toggler]');
                     if (t) {
                         t.classList.add('w-[10%]');
                         t.previousElementSibling.classList.add('w-[10%]');
                     }
                 }
-
                 var c = btn.querySelector('[data-box-content]');
                 if (c) {
                     c.classList.remove('sr-only');
                     c.classList.remove('opacity-0');
                     c.classList.add('opacity-100');
                 }
-
             });
-
         });
-
     }); </script>
 </main>
-
-
-
 <?php get_template_part("layout/footer"); ?>
