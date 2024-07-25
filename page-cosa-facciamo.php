@@ -1,3 +1,10 @@
+<?php
+  /*
+  *
+  * Template Name: Cosa facciamo
+  *
+  */
+?>
 <?php get_template_part("layout/header"); ?>
 <main>
     <h1 class="text-3xl font-bold underline hidden">
