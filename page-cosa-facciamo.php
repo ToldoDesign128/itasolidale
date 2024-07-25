@@ -99,7 +99,7 @@
         );
 
         $args = array(
-            'post_type' => 'projects',
+            'post_type' => 'post',
             'posts_per_page' => -1,
             'meta_query' => $meta_query,
         );
