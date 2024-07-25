@@ -4,7 +4,7 @@
     <?php the_title()?>
   </h1>
   
-  <!-- <?php echo do_shortcode('[contact-form-7 id="994a47e" title="Form Donazioni"]'); ?> -->
+  <?php echo do_shortcode('[contact-form-7 id="994a47e" title="Form Donazioni"]'); ?>
   
   <?php the_content(); ?>
   
