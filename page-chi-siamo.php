@@ -33,7 +33,7 @@
                             in forma di Mutua. Ogni giorno, ITAS si impegna ad intercettare le esigenze di protezione e
                             sicurezza delle persone e dei territori in cui opera, offrendo soluzioni assicurative e
                             servizi all’avanguardia senza mai trascurare la missione etica e sociale con cui è nata.</p>
-                        <a href="http://gruppoitas.it/" target="_blank" class="w-[129px] h-[49px] px-36 py-3 bg-white rounded-lg justify-center items-center gap-3 inline-flex">
+                        <a href="http://gruppoitas.it/" target="_blank" class="w-fit h-[49px] px-6 py-3 mx-36 my-12 bg-white rounded-lg justify-center items-center gap-3 inline-flex">
                             <p href="http://gruppoitas.it/" target="_blank" class="text-center text-zinc-500 text-lg font-medium">Scopri di più</p>
                             <div class="w-6 h-6 relative">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
