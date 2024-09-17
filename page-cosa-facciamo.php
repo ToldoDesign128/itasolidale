@@ -23,7 +23,7 @@
                 <div role="button" class="top-0 bottom-0 left-0 right-0  absolute">
                     <div data-box-content class="text-left m-auto w-2/3 mt-40 sr-only">
                         <h4 class="my-4 font-medium text-[54.93px]  pl-24">Fondo per la solidarietà</h4>
-                        <p class="font-light px-36 text-xl">E’ un fondo alimentato ogni mese dalle donazioni volontarie e continuative di agenti, dipendenti e compagnia.</p>
+                        <p class="font-light px-36 text-xl">E’ un fondo alimentato ogni mese dalle donazioni volontarie e continuative di dipendenti e agenti ITAS e dalle donazioni della stessa Compagnia. Rappresenta il "salvadanaio" con cui sosteniamo ogni anno microprogetti sui territori e grandi cause di solidarietà.</p>
                     </div>
                 </div>
             </div>
